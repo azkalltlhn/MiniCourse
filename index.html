@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- title untuk halaman web -->
+    <title>Mini Project</title>
+    <!-- link menuju css -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+     <!-- link menuju javascript -->
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <div class="satu">
+    <!-- judul -->
+    <h1>Kalkulator BMI</h1>
+    <!-- isi dari judul menggunakan tag p -->
+    <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh
+        <br>yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh
+        <br>yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.
+    </p>
+    <!-- box untuk menampung jenis kelamin, gender, berat badan. usia, dan tinggi badan -->
+    <div class="box">
+    <div class="jenis_kelamin"><b>Jenis Kelamin:</b>
+        <br>
+        <!--menambahkan nama dan id-->
+        <input type="radio" name="gender" id="gender" value="pria"><b>Pria</b>
+        <input type="radio" name="gender" id="gender" value="wanita"><b>Wanita</b>
+        <br><br>
+    </div>
+    <!-- bagian untuk berat badan -->
+    <div class="field">
+        <label><b>Berat badan (kg)</b></label>
+        <div class="input-with-icon">
+            <input type="text" name="beratbadan" id="beratbadan">
+        <br><br>
+        </div>
+    </div>
+     <!-- bagian untuk usia -->
+    <div class="field">
+        <label><b>Usia (tahun)</b></label>
+        <div class="input-with-icon">
+            <input type="text" name="usia" id="usia">
+        <br><br>
+        </div>
+    </div>
+     <!-- bagian untuk tinggi badan -->
+    <div class="field">
+        <label><b>Tinggi badan (cm)</b></label>
+        <div class="input-with-icon">
+            <input type="text" name="tinggibadan" id="tinggibadan">
+        <br><br><br>
+        </div>
+    </div>
+    <div class="button1">
+        <!-- bagian untuk tombol hitungBMI dan reset -->
+        <input name="upload" type="submit" id="upload" value="Hitung BMI" onclick="hitungBMI()">
+        <input name="cancel" type="reset" id="cancel" value="Reset" onclick="resetForm()">
+    </div>
+    </div>
+    <!-- bagian untuk menampilkan keunggulan -->
+    <h2 class="dua">Keunggulan Fitur</h2>
+    <ol type="1">
+        <li>Menghitung berat badan</li>
+        <li>Menentukan kategori berat badan ideal atau tidak</li>
+        <li>Mempersiapkan program penurunan berat badan</li>
+    </ol>
+    <br>
+    <!-- tambahan penjelasan mengenai kalkulator -->
+    <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau 
+        <br>menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada 
+        <br>tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi 
+        <br>dengan orang yang memenuhi syarat seperti dokter.
+
+        <br><br><br>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan 
+        <br>Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung dengan
+        <br>berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan 
+        <br>Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.
+    </p>
+</div>
+
+<!-- bagian untuk menampilkan hasil -->
+<div id="resultContent" class="hidden">
+    <h1>Hasil</h1>
+    <div class="dua">
+        <!-- box untuk menampung status, perhitungan, penjelasan, dan keterangan element-->
+        <div class="box2">
+            <p id="statusResult"></p>
+            <p id="bmiResult"></p>
+            <p id="resultElement"></p>
+            <br>
+            <input name="upload" type="submit" id="download" value="Download Hasil BMI">
+        </div>  
+        <p id="keteranganElement"></p>
+
+        <div class="button3">
+            <input name="upload" type="submit" id="upload" value="Konsultasi Ahli Gizi Via Aplikasi">
+            <input name="upload" type="submit" id="upload" value="Registrasi Online Ahli Gizi">
+        </div>
+        <!-- tambahan penjelasan-->
+        <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari
+        <br>kesehatan tubuh dan resiko penyakit seseorang. Anda
+        <br>perlu konsultasi lebih lanjut mengenai resiko dan 
+        <br>kekhawatiran Anda terkait dengan berat badan Anda.
+        </p>
+    </div>
+        <!-- box untuk menampung isi dari penyakit -->
+        <div class="box3">
+            <p id="penyakitElement"></p>
+            <br>
+            <input name="upload" type="submit" id="konsultasi" value="Konsultasi Dokter Via Aplikasi">
+            <input name="upload" type="submit" id="registrasi" value="Registrasi Online Sekarang">
+        </div>
+        <br>
+        <div class="appdownload">
+            <p class="app">Download Aplikasi</p>
+            <!-- Tautan ke Play Store -->
+            <a href="https://play.google.com/store/apps/details?id=nama_aplikasi" target="_blank">
+                <img src="./assets/playstore.png" alt="Download di Play Store" width="150" height="50">
+            </a>
+        
+            <!-- Tautan ke App Store -->
+            <a href="https://apps.apple.com/us/app/nama_aplikasi/idxxxxxxxxx" target="_blank">
+                <img src="./assets/appstore.png" alt="Download di App Store" width="150" height="50">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
